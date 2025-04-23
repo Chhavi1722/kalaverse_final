@@ -91,3 +91,40 @@
 @media only screen and (min-width: 900px) {
     /* Default styles already cover this */
 }
+/* Mobile Menu Fixes */
+@media only screen and (max-width: 900px) {
+    .nav-links {
+        position: fixed;
+        background: white;
+        height: calc(100vh - 60px);
+        width: 100%;
+        top: 60px;
+        left: -100%;
+        text-align: center;
+        transition: all 0.5s ease;
+        flex-direction: column;
+        padding-top: 2rem;
+        z-index: 999;
+        overflow-y: auto;
+    }
+
+    .nav-links.active {
+        left: 0;
+    }
+
+    .nav-links li {
+        margin: 1.5rem 0;
+        padding: 0 2rem;
+    }
+
+    .cart-link {
+        justify-content: center;
+        padding: 1rem;
+        background: var(--light-color);
+        margin: 1rem 2rem;
+        border-radius: 4px;
+    }
+    .no-scroll {
+        overflow: hidden;
+    }
+}
